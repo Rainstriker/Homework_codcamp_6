@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252A; 
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    z-index: 2;
+    background-color: #24252A; 
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    order: 3;
+    margin-left: auto;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+    color: white;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+.nav_links li a:hover{
+    color: lightskyblue;
+}
+
+/*index */
+
+.motto_picture img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    overflow: auto;
+    z-index: -1;
+}
+
+.motto_picture h1 {
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 100px;
+    background-color: transparent;
+}
+
+.motto_picture h1 span {
+    font-family: 'Pacifico', cursive;
+    color: rgb(255,255,255,0.94);
+    background-color: transparent;
+}
+
+/* profile */
+
+.me {
+    position: relative;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+}
+
+.me img {
+    max-width: 800px;
+    height: auto;
+    margin: auto;
+    overflow: auto;    
+}
+
+.hobby {
+    display: inline-flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    left: 0;
+    right: 0;
+}
+
+.hobby img {
+    max-width: 300px;
+    padding: 5px;
+}
+
+.hobby h3 {
+    padding: 30px;
+}
+
+.container_profile {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    overflow: auto;
+    z-index: -1;
+}
+
+.container_profile h3, p {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255,255,255,0.94);
+    background-color: transparent;
+}
+
+.container_profile .profile_text {
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 100px;
+    background-color: transparent;
+}
+
+@media only screen and (min-width: 400px) {
+    .me img {
+        width: 500px;
+    }
+}
+
+/* friends */
+
+.friends_container {
+    align-items: center;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.friends_container div div {
+    border: 1px solid white;
+}
+
+.friends_container div div ul li{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
