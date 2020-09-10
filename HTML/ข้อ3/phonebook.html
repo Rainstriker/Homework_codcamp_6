@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phonebook</title>
+    <style>
+        .table {display: table; border-top: 2px dotted black; border-left: 2px dotted black;}
+
+        .table-header {display: table-header-group;}
+
+        .table-header-cell {display: table-cell;}
+
+        .table-body {display: table-row-group;}
+
+        .row {display: table-row;}
+
+        .cell {display: table-cell; }
+
+        .table-header-cell, .cell {border-bottom: 2px dotted black; border-right: 2px dotted black;}
+
+        p {color: brown;}
+
+        @media only screen and (max-width: 320px) {
+            p {font-size: 20px;}
+            .table-header-cell, .cell {padding: 5px 10px;}
+        }        
+
+        @media only screen and (min-width: 320px) {
+            p {font-size: 30px;}
+            .table-header-cell, .cell {padding: 5px 30px;}
+        }
+
+        @media only screen and (min-width: 720px) {
+            p {font-size: 50px;}
+            .table-header-cell, .cell {padding: 5px 30px;}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="table">
+        <div class="table-header">
+            <div class="table-header-cell"><p><b>Name</b></p></div>
+            <div class="table-header-cell"><p><b>Tel no.</b></p></div>
+        </div>
+        <div class="table-body">
+            <div class="row">
+                <div class="cell"><p>TA Tle</p></div>
+                <div class="cell"><p><u>083-4284942</u></p></div>
+            </div>
+            <div class="row">
+                <div class="cell"><p>KFC</p></div>
+                <div class="cell"><p><u>1150</u></p></div>
+            </div>
+            <div class="row">
+                <div class="cell"><p>Pizza Hut</p></div>
+                <div class="cell"><p><u>1112</u></p></div>
+            </div>
+            <div class="row">
+                <div class="cell"><p>Yayoi-ยาโยอิ</p></div>
+                <div class="cell"><p><u>1642</u></p></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
