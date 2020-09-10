@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <style>
+
+        .table {
+            display: table;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 20px
+        }
+
+        .table-body {
+            display: table-row-group;
+
+        }
+
+        .table-row {
+            display: table-row;
+        }
+
+        .table-row .last {
+            width: 10px
+        }
+
+        .table-cell {
+            display: table-cell;
+            padding: 5px;
+        }
+
+        .child {
+            display: inline-block;
+        }
+
+        button {
+            color: white;
+            background-color: orange;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid darkorange;
+        }
+
+        button:hover {
+            background-color: darkorange;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <div class="table">
+            <div class="table-body">
+                <div class="table-row">
+                    <div class="table-cell">
+                        <label for="Flying_from">Flying from</label><br>
+                        <select id="Flying_from">
+                            <option value="singapore">Singapore</option>
+                            <option value="brunei">Brunei</option>
+                            <option value="malaysia">Malaysia</option>
+                            <option value="thailand" selected>Thailand</option>
+                            <option value="philipines">Philipines</option>
+                            <option value="indonesia">Indonesia</option>
+                            <option value="vietnam">Vietnam</option>
+                            <option value="laos">Laos</option>
+                            <option value="myanmar">Myanmar</option>
+                            <option value="cambodia">cambodia</option>
+                        </select>
+                    </div>
+                    <div class="table-cell">
+                        <label for="To">To</label><br>
+                        <select id="To">
+                            <option value="singapore">Singapore</option>
+                            <option value="brunei">Brunei</option>
+                            <option value="malaysia">Malaysia</option>
+                            <option value="thailand">Thailand</option>
+                            <option value="philipines">Philipines</option>
+                            <option value="indonesia">Indonesia</option>
+                            <option value="vietnam">Vietnam</option>
+                            <option value="laos">Laos</option>
+                            <option value="myanmar">Myanmar</option>
+                            <option value="cambodia">cambodia</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                        <label for="Departing">Departing</label><br>
+                        <input name="departing" id="Departing" type="date" max="2021-01-01">
+                    </div>
+                    <div class="table-cell">
+                        <label for="Returning">Returning</label><br>
+                        <input name="returning" id="Returning" type="date" max="2021-01-01">
+                    </div>
+                </div>
+                <div class="table-row last">
+                    <div class="table-cell">
+                        <div class="child">
+                            <label for="Adult">Adult</label><br>
+                            <input id="Adult" type="number" min="1" max="99">
+                        </div>
+                        <div class="child">
+                            <label for="Child">Child</label><br>
+                            <input id="Child" type="number" min="0" max="99">
+                        </div>
+                    </div>
+                    <div class="table-cell">
+                        <div class="child">
+                            <label for="Infant">Infant</label><br>
+                            <input id="Infant" type="number" min="0" max="99">
+                        </div>
+                        <div class="child">
+                            <label for="Currency">Currency</label><br>
+                        <select id="Currency">
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="JPY">JPY</option>
+                            <option value="GBP">GBP</option>
+                            <option value="AUD">AUD</option>
+                            <option value="CAD">CAD</option>
+                            <option value="CHF">CHF</option>
+                            <option value="CNH">CNH</option>
+                            <option value="HKD">HKD</option>
+                            <option value="NZD">NZD</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <button type="button"><b>SEARCH</b></button>
+        </div>
+    </form>
+</body>
+</html>
