@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        .container {display: inline-block;border: 3px solid grey; border-radius: 1%; padding: 10px;}
+        .btw {padding: 16px 0px;}
+        table {white-space: nowrap; width: 500px; font-family: 'Manrope', sans-serif; font-size: 12px;}
+        td label span {color: red;}
+        tr:not(:nth-child(3)) td:nth-child(2) {width: 2%;}
+        tr:not(:nth-child(3)) td:nth-child(2) * {width: 100%;}
+        tr td:nth-child(3) {width: 1%;}
+        .hov {background-image: linear-gradient( white, #FCF2AE, #EBDA71, #E7C455); border-radius: 25%; color: #C4944A; border: 1.5px solid #E7C455;}
+        .grey {background-image: linear-gradient( white,#D3D3D3); border-radius: 8%; border: 1.5px solid #D3D3D3;}
+        .btw {color: gray;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <table>
+                <tr>
+                    <td><label for="name">Name<span>*</span>:</label></td>
+                    <td><input type="text" id="name"></td>
+                    <td><button class="hov"><b>?</b></button></td>
+                </tr>
+                <tr>
+                    <td><label for="tab_text">Tab Text<span>*</span>:</label></td>
+                    <td><input type="text" id="tab_text"></td>
+                    <td><button class="hov"><b>?</b></button></td>
+                </tr>
+                <tr>
+                    <td><label for="url">URL<span>*</span>:</label></td>
+                    <td colspan="2"><span>http://www.wizehive.com/webform</span><input type="text" id="url"></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <div class="btw">
+                            <hr>
+                            <b>FORM SETUP</b>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="form">Form:</label></td>
+                    <td>
+                        <select id="form">
+                            <option value="Text">Text</option>
+                            <option value="Choices">Choices</option>
+                        </select>
+                    </td>
+                    <td><button class="grey">Edit</button></td>
+                </tr>
+                <tr>
+                    <td><label for="logo">Logo:</label></td>
+                    <td>No logo uploaded</td>
+                    <td><button class="grey">Upload Logo</button></td>
+                </tr>
+                <tr>
+                    <td><label for="template">Template Text:</label></td>
+                    <td>
+                        <select name="logo" id="logo">
+                            <option value="English">English</option>
+                            <option value="Thai">Thai</option>
+                        </select>
+                    </td>
+                    <td><button class="grey">Edit</button></td>
+                </tr>
+                <tr>
+                    <td><label for="review_form">Review Form:</label></td>
+                    <td>
+                        <select name="review_form" id="review_form">
+                            <option value="Default">Default</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="review_score">Review Score:</label></td>
+                    <td>
+                        <select name="review_score" id="review_score">
+                            <option value="Rating">Rating</option>
+                        </select>
+                    </td>
+                    <td><button class="grey">Reload Field</button></td>
+                </tr>
+                <tr>
+                    <td><label for="review_type">Review Type:</label></td>
+                    <td>
+                        <select name="review_type" id="review_type">
+                            <option value="Average">Average</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="max_score">Max Score:</label></td>
+                    <td><input type="number"></td>
+                </tr>
+            </table>    
+        </form>
+    </div>
+</body>
+</html>

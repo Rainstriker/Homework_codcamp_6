@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide 5 (review CSS)</title>
+    <style>
+        table, th, td {border: 1px solid black;}
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>CSS Syntax</th>
+            <th>CSS Writing</th>
+            <th>Selector</th>
+            <th>Combinator</th>
+        </tr>
+        <tr>
+            <td>โครงสร้างคำสั่ง</td>
+            <td>h1 {color:blue; font-size:12px;}</td>
+            <td>h1</td>
+            <td>{color:blue; font-size:12px;}</td>
+        </tr>
+    </table>
+    <h2>For example css syntax</h2>
+    <p>table, th, td {border: 1px solid black;}</p>
+    <h2>For example css writing</h2>
+    <ul>
+        <li>table, th, td {border: 1px solid black;}</li>
+        <li>h1 {color:blue; font-size:12px;}</li>
+        <li>.data-table {display: table; border-top: 2px dotted black; border-left: 2px dotted black;}</li>
+        <li>#me {position: relative; top: 5%; display: flex; flex-direction: column; z-index: -1;}</li>
+    </ul>
+    <h2>Selector example case</h2>
+    <table>
+        <tr>
+            <th>Selector</th>
+            <th>Example</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>.class</td>
+            <td>.intro</td>
+            <td>Selects all elements with class="intro"</td>
+        </tr>
+        <tr>
+            <td>#id</td>
+            <td>#firstname</td>
+            <td>Selects the element with id="firstname"</td>
+        </tr>
+        <tr>
+            <td>*</td>
+            <td>*</td>
+            <td>Selects all elements</td>
+        </tr>
+            <td>element</td>
+            <td>p</td>
+            <td>Selects all &lt;p&gt; elements</td>
+        <tr>
+            <td>[attribute]</td>
+            <td>[target]</td>
+            <td>Selects all elements with a target attribute</td>
+        </tr>
+        <tr>
+            <td>:hover</td>
+            <td>a:hover</td>
+            <td>Selects links on mouse over</td>
+        </tr>
+    </table>
+    <h1>CSS Writing Style</h1>
+    <ul>
+        <li>Inline Style <br>Wiritingg inside html tag by using the style attribute</li>
+        <li>Internal Style <br>Wiriting in the same html page inside style tag that inside head tag</li>
+        <li>External Style <br>Create style.css file and write CSS inside that and at link html page to style.css</li>
+    </ul>
+    <h1>CSS Combinators</h1>
+    <ul>
+        <li>Descendant Selector <br>Combine selectors by using whitespace. It means select descendant element that consist all selected tags <br><b>example:</b> div p {background-color: yellow;}</li>
+        <li>Child Selector <br>Combine selectors by using ">". It means select child element that under parent tag<br><b>example:</b> div > p {background-color: yellow;}</li>
+        <li>Adjacent Sibling Selector <br>Combine selectors by using "+".  It means select adjacent element to the first one<br><b>example:</b>div + p {background-color: yellow;}</li>
+        <li>General Sibling Selector <br>Combine selectors by using "~". It means select all sibling elements that after the first tag<br><b>example:</b>div ~ p {background-color: yellow;}</li>
+    </ul>
+</body>
+</html>
