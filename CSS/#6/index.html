@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 34</title>
+    <style>
+        img {position:relative; display: block; margin: auto; padding: 10px;}
+        .container {display: block; margin: auto; padding: 10px;}
+        .box_container {
+                        position: relative;
+                        display: flex; 
+                        flex-direction: row; 
+                        flex-flow: wrap; 
+                        justify-content: space-evenly; 
+                        align-items: baseline; 
+                        width: 1000px; 
+                        margin: auto;
+                        gap: 10px;
+                        } 
+        .box {border: 2px solid black; width: 250px; text-align: center; padding: 10px 10px;}
+        #first {background-color: lightsteelblue;}
+        #second {background-color: mediumseagreen;}
+        #third {background-color: mistyrose;}
+        #fourth {background-color: navajowhite;}
+        #fifth {background-color: palevioletred;}
+        #sixth {background-color: aquamarine;}
+
+        @media only screen and (max-width: 720px){
+            img {width: 600px;}
+            .box_container {width: 500px;}
+        }
+
+        @media only screen and (max-width: 480px){
+            img {width: 300px;}
+            .box_container {width: 500px;}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="CAT.jpg" alt="CAT">
+        <div class="box_container">
+            <div class="box" id="first">
+                <h1>Topic 1</h1>
+                <p>.............</p>
+                <p>.............</p>
+                <p>.............</p>
+            </div>
+            <div class="box" id="second">
+                <h1>Topic 2</h1>
+                <p>.............</p>
+                <p>.............</p>
+                <p>.............</p>
+            </div>
+            <div class="box" id="third">
+                <h1>Topic 3</h1>
+                <p>.............</p>
+                <p>.............</p>
+                <p>.............</p>
+            </div>
+            <div class="box" id="fourth">
+                <h1>Topic 4</h1>
+                <p>.............</p>
+                <p>.............</p>
+                <p>.............</p>
+            </div>
+            <div class="box" id="fifth">
+                <h1>Topic 5</h1>
+                <p>.............</p>
+                <p>.............</p>
+                <p>.............</p>
+            </div>
+            <div class="box" id="sixth">
+                <h1>Topic 6</h1>
+                <p>.............</p>
+                <p>.............</p>
+                <p>.............</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
