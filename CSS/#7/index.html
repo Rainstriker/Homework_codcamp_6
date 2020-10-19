@@ -1,0 +1,297 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pimclick®</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Sora:wght@800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Commissioner&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;500;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&family=IM+Fell+Double+Pica:ital@0;1&display=swap');
+        html {font-size: 16px;}
+        input {width: 100%;}
+        header {position: fixed; top: 0; height: 30px; width: 100%;}
+        nav {display: inline-flex; width: 100%; height: auto;box-sizing: border-box;justify-content: space-between; padding: 0 50px 0 45px;}
+        .img_container {position: absolute; top: 0; left: 0; z-index: -1; overflow: hidden; height: 98%;}
+        img {width: 100%; height: auto;}
+        .logo {font: 2.3rem 'Montserrat Alternates', sans-serif; color: orangered; margin-left: 5px; margin-top: 9px;}
+        .V_cont {width: 150px; height: 500px; display: flex; justify-content: center; align-items: center; white-space: nowrap; flex-direction: column; gap: 38px; margin-left: -18px; margin-top: 52px;}
+        .slim {height: 28px; width: 1px; background-color: orangered;}
+        .V_text {transform: rotate(-90deg); font: 2.3rem 'Sora', sans-serif; color: orangered; letter-spacing: -2px;}
+        .about_btn #style1, .about_btn #style2 {border: none; background: none; padding-top: 0; cursor: pointer;}
+        .about_btn #style1 {font: 0.65rem 'Commissioner', sans-serif; letter-spacing: 1px; color: rgba(66,66,66,1); margin-top: 0;}
+        .about_btn #style1 p {margin-top: 20%;}
+        .orng_btn {background-color: orangered; width: 42px; height: 24px; border-bottom: 1px solid grey; transition: height 0.2s;}
+        .slim2 {border-bottom: 1px solid white; width: 29px; height: 20px; margin: auto; transition: height 0.2s;}
+        .orng_btn:hover {height: 33px;}
+        .orng_btn:hover > .slim2 {height: 29px;}
+        .header_container {margin-top: 2%; text-align: center;}
+        .header {color: white; display: inline-block; line-height: 10px;}
+        #main {font-size: 7.5rem; font-family: 'Montserrat Alternates', sans-serif; letter-spacing: -6.5px;}
+        #sub {font-size: 7rem; font-family: 'Montserrat', sans-serif;  font-weight: 300; letter-spacing: -11px; word-spacing: 10px;}
+        #sub span {word-spacing: -13px;}
+        .trademark {font: 1.5rem 'Montserrat Alternates', sans-serif; color: white; display: inline; vertical-align: 50px;}
+        
+        .form_container {background-color: white; width: 70%; height: 814px; margin: auto; border-radius: 2%; margin-top: 12%; padding-top: 4px;}
+        .form_container h3 {font: 3.5rem 'Montserrat Alternates', sans-serif; color: rgba(50,50,50,1); letter-spacing: -3px; text-align: center;}
+        .form_container h3 span {color: rgba(232, 39, 81, 1);}
+        
+        .input_container label {display: block; padding: 20px 0 10px 0;}
+        .input_container {padding: 0 6%; font: 1.2rem 'Commissioner', sans-serif; color: rgba(100,100,100,1); font-weight: 200; margin-top: -20px;}
+        .input_container input, .input_container textarea {font: 1.2rem 'Commissioner', sans-serif; padding: 10px; font-weight: 200; border: 1px rgba(220,220,220,1) solid; width: 100%; resize: none;}
+        .input_container input:focus, .input_container textarea:focus {outline: none;}
+        .name_mail_cont {display: inline-flex; justify-content: space-between; width: 100%; gap: 18px;}
+        .name_mail_cont div {width: 100%;}
+        .send_btn {margin-top: 4.5%; margin-left: 41%; font: 2rem 'Commissioner', sans-serif; font-weight: 700; color: white;background-color: rgba(242, 22, 44, 1); width: 212px; height: 52px; border: none; border-radius: 5px;} 
+        .des {text-align: justify; font: 1.5rem 'Commissioner', sans-serif; color: rgba(100,100,100,1); font-weight: 300; width: 66% ;text-align: justify; text-align-last: center; line-height: 35px; margin-left: 17%; margin-top: 8%;}
+        #style2 {display: none; flex-direction: column; gap: 3.3px; margin-top: 28px;}
+        #style2 div {width: 38px; height: 1px; background-color: orangered;}
+        .message {position: fixed; bottom: 0; right: 10px; margin-bottom: 0; background-color: orangered; width: 126px; height: 40px; border-radius: 7px 7px 0 0; color: white;  font: 0.9rem 'Commissioner', sans-serif; border: none; cursor: pointer;}
+        
+        .popup {position: fixed; bottom: 0; right: 10px; width: 350px;}
+        .popup_header {border: 1px solid white; border-top-left-radius: 7px;  border-top-right-radius: 7px; background-color: orangered; font: 0.9rem 'Commissioner', sans-serif; color: white; padding: 7px 18px; text-align: center;}
+        .popup div div {position: relative; display: inline-flex; justify-content: space-between; width: 100%;}
+        .popup_form {background-color: white; padding: 40px; outline: 1px solid  rgba(100,100,100,0.2); outline-offset: -20px; }
+        .popup_form form * {margin: 5px;}
+        .popup_form input, .popup_form textarea {font: 0.5 'Commissioner', sans-serif; border: 2px solid rgba(100,100,100,0.4); border-radius: 7px; padding: 10px; resize: none;}
+        .popup_form label {position: absolute; margin-top: -35px; margin-left: 20px; font: 0.8rem 'Commissioner', sans-serif; font-weight: 500;color: rgba(100,100,100,1);}
+        .popup_form input:focus + label {font-size: 0.6rem; margin-top: -43px; margin-left: 10px; color: rgba(100,100,100,0.7);}
+        .popup_form input:focus, .popup_form textarea:focus {outline: none;}
+        .popup_form textarea + label {margin-top: -80px;}
+        .popup_form textarea:focus + label {font-size: 0.6rem; margin-top: -88px; margin-left: 10px; color: rgba(100,100,100,0.7); outline: none;}
+        .submit {width: 100%; padding: 12px 0; color: white; background-color: orangered; font: 0.9rem 'Commissioner', sans-serif; font-weight: 500; border-radius: 7px; border: none; cursor: pointer;}
+        .popup_header a {font-size: 25px; text-decoration: none; color: white; margin-top: 10px; cursor: pointer;}
+        .popup {visibility: hidden;}
+
+        .video_cont {position: relative; width: 1100px; height: 426.14; margin: 100px auto auto auto;}
+
+        .txt_cont {display: grid; grid-template-columns: auto auto; margin-left: 15%; width: 80%;}
+        .txt_cont div {width: 100%;}
+        .txt_cont h3 {font: 3.75rem 'Commissioner', sans-serif; font-weight: 700; color: rgba(232, 39, 81, 1);}
+        .txt_cont ul {margin: 0; padding: 0;}
+        .txt_cont li {font: 1.125rem 'Commissioner', sans-serif; color: rgba(100,100,100,1); list-style-type: none;}
+
+        .lower {text-align: center; margin-top: 150px;}
+        .lower em {font: 1.375rem 'IM Fell Double Pica', serif; color: rgba(232, 39, 81, 1); font-style: italic;}
+        .lower p {font: 1.375rem 'IM Fell Double Pica', serif; color: rgba(100,100,100,1);}
+        
+        @media only screen and (max-width: 1040px) {
+            #main {font-size: 4.5rem; letter-spacing: -4px;}
+            #sub {font-size: 4rem; letter-spacing: -7px;}
+            #sub span {word-spacing: -6px;}
+            .trademark {font-size: 1rem; vertical-align: 33px;}
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .form_container {width: 80%;}
+            nav {padding: 0 30px 0 18px;}
+            .V_cont {width: 90px;}
+            .logo {margin-top: -15px;}
+            .about_btn #style1 {font-size: 0.4rem;}
+            .orng_btn {height: 4px; width: 30px;}
+            .orng_btn:hover {height: 15px;}
+            .slim2 {width: 20px; height: 0.1px; border-bottom: none;}
+            .orng_btn:hover > .slim2 {height: 10px; display: block; border-bottom: 1px solid white;}
+            .video_cont {width: 768px; height: 297.53px;}
+            .txt_cont h3 {font-size: 2.75rem;}
+        }
+
+        @media only screen and (max-width: 785px) {
+            #style1 {display: none;}
+            #style2 {display: flex;}
+            .V_cont {display: none;}
+            .logo {margin-top: -6px;}
+            nav {padding: 0 30px 0 24px;}
+            .form_container {width: 92%;}
+            .send_btn {margin-left: 30%;}
+            .video_cont {width: 600px; height: 232.45px;}
+            .txt_cont h3 {font-size: 3.75rem;}
+            .txt_cont {grid-template-columns: auto;}
+        }
+
+        @media only screen and (max-width: 680px) {
+            .form_container {width: 96%;}
+        }
+
+        @media only screen and (max-width: 680px) {
+            .form_container {width: 98%;}
+        }
+
+        @media only screen and (max-width: 600px) {
+            .header_container {margin-top: 30px;}
+            #main {font-size: 3rem; letter-spacing: -2.5px;}
+            #sub {font-size: 2.5rem; letter-spacing: -4.5px;}
+            #sub span {word-spacing: -2px;}
+            .trademark {font-size: 0.5rem; vertical-align: 20px;}
+            .form_container {width: 78%;}
+            .form_container h3 {font-size: 2rem;}
+            .name_mail_cont {display: block;}
+            .video_cont {width: 420px; height: 162.72px;}
+        }
+
+        @media only screen and (max-width: 400px) {
+            #main {font-size: 2rem; letter-spacing: -1px;}
+            #sub {font-size: 1.5rem; letter-spacing: -1.5px;}
+            #sub span {word-spacing: -3px;}
+            .form_container {width: 90%;}
+            .send_btn {margin-left: 15%;}
+            .video_cont {width: 300px; height: 116.22px;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h4 class="logo">p</h4>
+            <div class="about_btn">
+                <button id="style1">
+                    <div class="orng_btn"><div class="slim2"></div></div>
+                    <p>ABOUT</p>
+                </button>
+                <div id="style2">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div> 
+            </div>
+        </nav>
+        <div class="V_cont">
+            <h4 class="V_text">pimclick®</h4>
+            <div class="slim"></div>
+        </div>  
+    </header>
+    <div class="img_container">
+        <img src="white.jpg" alt="milkyway">
+    </div>
+    <div class="header_container">
+        <h1 class="header" id="main">pimclick</h1>
+        <span class="trademark">®</span><br>
+        <h1 class="header" id="sub">creative digital agenc<span> y</span></h1>
+    </div>
+    <div class="form_container">
+        <h3>Contact us <span>today</span></h3>
+         <form class="input_container">
+            <div class="name_mail_cont">
+                <div>
+                    <label>Your Name (required)</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>Your Email (required)</label>
+                    <input type="text">
+                </div>
+            </div>
+            <label>Subject</label>
+            <input type="text">
+            <label>Your message</label>
+            <textarea name="your_message" id="Your_message" cols="92" rows="7"></textarea>
+        </form>
+        <button class="send_btn">SEND</button>
+    </div>
+    <div class="des">
+        <p>Pimclick is a full service web design and online marketing agency offering a unique blend of creativity and expertise within the entirety of the digital spectrum. With headquarters located in Paris, France and branch offices dispersed throughout major cities such as Dubai, Hong Kong, Casablanca and Bangkok.</p>
+    </div>
+    <div class="video_cont">
+        <iframe class="video" width="100%" height="100%" src="https://www.youtube.com/embed/r0q6a_9fg_Y" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <footer>
+        <button class="message" onclick="openForm()">Send message</button>
+        <div class="popup" id="popup">
+            <div class="popup_header">
+                <div>
+                    <p>Send message</p>
+                    <a class="close" onclick="closeForm()">&times;</a>
+                </div>
+                <p>Please fill out the form below and we will get back to you as soon as possible.</p>
+            </div>
+            <div class="popup_form">
+                <form action="">
+                    <input type="text">
+                    <label for="name">* Name</label>
+                    <input type="text">
+                    <label for="email">* Email</label>
+                    <textarea name="popup_message" id="Popup_message" cols="33" rows="4"></textarea>
+                    <label for="message">* Message</label>
+                    <button class="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="txt_cont">
+            <div>
+                <h3>Digital<br>Strategy</h3>
+                <ul>
+                    <li>Business Intelligence</li>
+                    <li>SEO – Search Engine Optimization</li>
+                    <li>SEM streategy</li>
+                    <li>Digital Content</li>
+                    <li>Branding Design</li>
+                    <li>UX & UI Design</li>
+                    <li>Product Prototype</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Digital<br>Production</h3>
+                <ul>
+                    <li>WebSites & Microsites</li>
+                    <li>Responsive Design / Development</li>
+                    <li>Mobile APP & Games</li>
+                    <li>Intranet & Extranet</li>
+                    <li>Virtual & Augmented Reality</li>
+                    <li>Interactive Installations</li>
+                </ul>
+            </div>
+            <div>
+                <h3>E-Marketing</h3>
+                <li>BCampaigns management</li>
+                <li>Market research</li>
+                <li>User analysis</li>
+                <li>Brand activation</li>
+                <li>E-Commerce Development</li>
+                <li>Social Media strategy and</li>
+                <li>optimisation</li>
+                <li>Advocacy & Influencer</li>
+            </div>
+            <div>
+                <h3>Graphic Design</h3>
+                <ul>
+                    <li>Creative Art direction</li>
+                    <li>Branding & Identity</li>
+                    <li>3D modeling / Animation</li>
+                    <li>UI/UX design</li>
+                    <li>Prints & Signaletics</li>
+                    <li>Visual storytelling</li>
+                    <li>Layouting & Infographics</li>
+                    <li>Typography</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Video<br>Production</h3>
+                <ul>
+                    <li>Campaigns management</li>
+                    <li>Scripting / Story Boarding</li>
+                    <li>Filming</li>
+                    <li>Editing/Grading</li>
+                    <li>Motion Design</li>
+                    <li>Sound design</li>
+                </ul>
+            </div>
+        </div>
+        <div class="lower">
+            <em>Our Clients</em>
+            <p>We partner up with forward thinking clients,<br>being an extension of it’s marketing area.</p>
+        </div>
+    </footer>
+</body>
+<script>
+    document .querySelector(".message").addEventListener("click", openForm);
+    document .querySelector(".close").addEventListener("click", closeForm);
+   
+    function openForm() {
+      document.querySelector(".popup").style.visibility = "visible";
+   }
+   function closeForm() {
+      document.querySelector(".popup").style.visibility = "hidden";
+   }
+</script>
+</html>
