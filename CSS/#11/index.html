@@ -1,0 +1,162 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pimclick®</title>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <h4 class="logo">p</h4>
+            <div class="about_btn">
+                <button id="style1">
+                    <div class="orng_btn"><div class="slim2"></div></div>
+                    <p>ABOUT</p>
+                </button>
+                <div id="style2">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div> 
+            </div>
+        </nav>
+        <div class="V_cont">
+            <h4 class="V_text">pimclick®</h4>
+            <div class="slim"></div>
+        </div>  
+    </header>
+    <div class="img_container">
+        <img src="white.jpg" alt="milkyway">
+    </div>
+    <div class="header_container">
+        <h1 class="header" id="main">pimclick</h1>
+        <span class="trademark">®</span><br>
+        <h1 class="header" id="sub">creative digital agenc<span> y</span></h1>
+    </div>
+    <div class="form_container">
+        <h3>Contact us <span>today</span></h3>
+         <form class="input_container">
+            <div class="name_mail_cont">
+                <div>
+                    <label>Your Name (required)</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>Your Email (required)</label>
+                    <input type="text">
+                </div>
+            </div>
+            <label>Subject</label>
+            <input type="text">
+            <label>Your message</label>
+            <textarea name="your_message" id="Your_message" cols="92" rows="7"></textarea>
+        </form>
+        <button class="send_btn">SEND</button>
+    </div>
+    <div class="des">
+        <p>Pimclick is a full service web design and online marketing agency offering a unique blend of creativity and expertise within the entirety of the digital spectrum. With headquarters located in Paris, France and branch offices dispersed throughout major cities such as Dubai, Hong Kong, Casablanca and Bangkok.</p>
+    </div>
+    <div class="video_cont">
+        <iframe class="video" width="100%" height="100%" src="https://www.youtube.com/embed/r0q6a_9fg_Y" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <footer>
+        <button class="message" onclick="openForm()">Send message</button>
+        <div class="popup" id="popup">
+            <div class="popup_header">
+                <div>
+                    <p>Send message</p>
+                    <a class="close" onclick="closeForm()">&times;</a>
+                </div>
+                <p>Please fill out the form below and we will get back to you as soon as possible.</p>
+            </div>
+            <div class="popup_form">
+                <form action="">
+                    <input type="text">
+                    <label for="name">* Name</label>
+                    <input type="text">
+                    <label for="email">* Email</label>
+                    <textarea name="popup_message" id="Popup_message" cols="33" rows="4"></textarea>
+                    <label for="message">* Message</label>
+                    <button class="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="txt_cont">
+            <div>
+                <h3>Digital<br>Strategy</h3>
+                <ul>
+                    <li>Business Intelligence</li>
+                    <li>SEO – Search Engine Optimization</li>
+                    <li>SEM streategy</li>
+                    <li>Digital Content</li>
+                    <li>Branding Design</li>
+                    <li>UX & UI Design</li>
+                    <li>Product Prototype</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Digital<br>Production</h3>
+                <ul>
+                    <li>WebSites & Microsites</li>
+                    <li>Responsive Design / Development</li>
+                    <li>Mobile APP & Games</li>
+                    <li>Intranet & Extranet</li>
+                    <li>Virtual & Augmented Reality</li>
+                    <li>Interactive Installations</li>
+                </ul>
+            </div>
+            <div>
+                <h3>E-Marketing</h3>
+                <li>BCampaigns management</li>
+                <li>Market research</li>
+                <li>User analysis</li>
+                <li>Brand activation</li>
+                <li>E-Commerce Development</li>
+                <li>Social Media strategy and</li>
+                <li>optimisation</li>
+                <li>Advocacy & Influencer</li>
+            </div>
+            <div>
+                <h3>Graphic Design</h3>
+                <ul>
+                    <li>Creative Art direction</li>
+                    <li>Branding & Identity</li>
+                    <li>3D modeling / Animation</li>
+                    <li>UI/UX design</li>
+                    <li>Prints & Signaletics</li>
+                    <li>Visual storytelling</li>
+                    <li>Layouting & Infographics</li>
+                    <li>Typography</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Video<br>Production</h3>
+                <ul>
+                    <li>Campaigns management</li>
+                    <li>Scripting / Story Boarding</li>
+                    <li>Filming</li>
+                    <li>Editing/Grading</li>
+                    <li>Motion Design</li>
+                    <li>Sound design</li>
+                </ul>
+            </div>
+        </div>
+        <div class="lower">
+            <em>Our Clients</em>
+            <p>We partner up with forward thinking clients,<br>being an extension of it’s marketing area.</p>
+        </div>
+    </footer>
+</body>
+<script>
+    document .querySelector(".message").addEventListener("click", openForm);
+    document .querySelector(".close").addEventListener("click", closeForm);
+   
+    function openForm() {
+      document.querySelector(".popup").style.visibility = "visible";
+   }
+   function closeForm() {
+      document.querySelector(".popup").style.visibility = "hidden";
+   }
+</script>
+</html>

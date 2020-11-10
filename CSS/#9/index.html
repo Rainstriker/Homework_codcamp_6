@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Slide 52</title>
+    <style>
+        .anime1 {animation-name: anime; width: 150px; height: 150px; animation-delay: 2s; background-color: red; animation-duration: 5s; animation-iteration-count: 2;}
+        .anime2 {animation-name: anime; width: 150px; height: 150px; animation-delay: 2s; background-color: blue; animation-duration: 5s; animation-direction: alternate; animation-iteration-count: 2;} 
+        .anime3 {animation-name: anime; width: 150px; height: 150px; animation-delay: 2s; background-color: chartreuse; animation-duration: 5s; animation-direction: reverse; animation-iteration-count: 2;}
+        .anime4 {animation-name: anime; width: 150px; height: 150px; animation-delay: 12s; background-color: yellow; animation-duration: 10s;}
+        .anime5 {animation-name: anime; width: 150px; height: 150px; animation-delay: 12s; background-color: violet; animation-duration: 10s;}
+        @keyframes anime {
+            20% {opacity: 0.8;}
+            40% {opacity: 0.6;}
+            60% {opacity: 0.4;}
+            80% {opacity: 0.2;}
+            100% {opacity: 0;}
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="anime1">normal</div>
+    <div class="anime2">alternate</div>
+    <div class="anime3">reverse</div>
+    <div class="anime4">ease-in</div>
+    <div class="anime5">ease-out</div>
+</body>
+</html>

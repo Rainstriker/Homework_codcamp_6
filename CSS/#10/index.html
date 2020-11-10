@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Slide 57</title>
+    <style>
+        .anime1 {width: 150px; height: 150px; background-color: blue; animation: anime1 10s infinite;}
+        .anime2 {width: 150px; height: 150px; background-color: chartreuse; animation: anime2 10s 0s 2 alternate;}
+        .anime3 {width: 150px; height: 150px; background-color: red; animation: anime3 10s 0s infinite alternate; margin-left: 0;}
+        @keyframes anime1 {
+            10% {background-color: seagreen;}
+            30% {background-color: springgreen;}
+            50% {background-color: tomato;}
+            70% {background-color: yellow;}
+            90% {background-color: violet;}
+        }
+        @keyframes anime2 {
+            20% {opacity: 0.8;}
+            40% {opacity: 0.6;}
+            60% {opacity: 0.4;}
+            80% {opacity: 0.2;}
+            100% {opacity: 0;}
+        }
+
+        @keyframes anime3 {
+            10% {margin-left: 50%;  margin-top: 0;}
+            30% {margin-left: 50%; margin-top: 50%;}
+            50% {margin-left: 0; margin-top: 50%;}
+            70% {margin-left: 0; margin-top: 25%;}
+            80% {margin-left: 25%; margin-top: 25%;}
+            90% {margin-left: 25%; margin-top: 0;}
+            100% {margin-left: 0; margin-top: 0;}
+
+        }
+    </style>
+</head>
+<body>
+    <div class="anime1"></div>
+    <div class="anime2"></div>
+    <div class="anime3"></div>
+</body>
+</html>
