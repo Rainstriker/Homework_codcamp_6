@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Cases</title>
+</head>
+<body>
+    <ol style="width: 40%;">
+        <li>แปลง Code ดังกล่าวเป็น if-else statement</li>
+        <ul>
+            <li>switch (browser) {</li>
+            <li>case 'Edge':</li>
+            <li>alert( "You've got the Edge!" );</li>
+            <li>break;</li>
+            <li></li>
+            <li>case 'Chrome':</li>
+            <li>case 'Firefox':</li>
+            <li>case 'Safari':</li>
+            <li>case 'Opera':</li>
+            <li>alert( 'Okay we support these browsers too' );</li>
+            <li>break;</li>
+            <li></li>
+            <li>default:</li>
+            <li>alert( 'We hope that this page looks ok!' );</li>
+            
+        </ul>
+        <li>แปลง Code ดังกล่าวเป็น Switch cases</li>
+        <ul>
+            <li>let a = +prompt('a?', '');</li>
+            <li>if (a == 0) {</li>
+            <li>alert( 0 );</li>
+            <li>}</li>
+            <li>if (a == 1) {</li>
+            <li>alert( 1 );</li>
+            <li>}</li>
+            <li>if (a == 2 || a == 3) {</li>
+            <li>alert( '2,3' );</li>
+            <li>}</li>
+        </ul>
+    </ol> 
+</body>
+<script>
+    if (browser == 'Edge') {
+        alert( "You've got the Edge!" );
+    } else if (browser == 'Chrome' || browser == 'Firefox' || browser == 'Safari' || browser == 'Opera') {
+        alert( 'Okay we support these browsers too' );
+    } else {
+        alert( 'We hope that this page looks ok!' );
+    }
+    
+    let a = +prompt('a?', '');
+    
+    switch (a) {
+        case 0:
+            alert( 0 ); 
+            break;
+        case 1:
+            alert( 1 );
+            break;
+        case 2:
+        case 3:
+            alert( '2,3' );
+            break;
+        default:
+    }
+</script>
+</html>

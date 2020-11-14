@@ -37,19 +37,9 @@
     } else {
         console.log('คุณไม่รู้จักชื่อฉัน');
     }
-
+ 
     //#3
     var score = prompt('userScore');
-    if(score > 80) {
-        alert('A');
-    } else if(score > 79) {
-        alert('B');
-    } else if(score > 69) {
-        alert('C');
-    } else if(score > 59) {
-        alert('D');      
-    } else {
-        alert('F');
-    }
+    score > 80 ? alert('A') : score > 79 ? alert('B') : score > 69 ? alert('C') :  score > 59 ? alert('D') : alert('F');
 </script>
 </html>

@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical</title>
+</head>
+<body>
+    <ol>
+        <li>คำสั่งต่อไปนี้จะแสดงค่าเป็นอะไร</li>
+        <ul>
+            <li>alert( null || 2 || undefined );</li>
+            <li>alert( alert(1) || 2 || alert(3) );</li>
+            <li>alert( 1 && null && 2 );</li>
+            <li>alert( alert(1) && alert(2) );</li>
+            <li>alert( null || 2 && 3 || 4 );</li>
+        </ul>
+        <li>เขียนคำสั่ง if ที่เช็คอายุว่าอยู่ระหว่าง 18 - 60</li>
+        <li>เขียนคำสั่ง if ที่เช็คอายุว่าไม่อยู่ระหว่าง 18 - 60</li>
+        <li>คำสั่ง alert ไหนที่จะถูกรันบ้าง</li>
+        <ul>
+            <li>if (-1 || 0) alert( 'first' );</li>
+            <li>if (-1 && 0) alert( 'second' );</li>
+            <li>if (null || -1 && 0) alert( 'third' );</li>
+        </ul>
+    </ol>
+</body>
+<script>
+    //#1
+    alert( null || 2 || undefined );
+    //output: 2
+    alert( alert(1) || 2 || alert(3) );
+    //output: 1
+    //output: 2
+    alert( 1 && null && 2 );
+    //output: null
+    alert( alert(1) && alert(2) );
+    //output: 1
+    //output: undefined
+    alert( null || 2 && 3 || 4 );
+    //output: 3
+   
+    //#2
+    let age = prompt('yourAge');
+    if(age >= 18 && age <= 60) {
+        alert( 'Your age is between 18-60.' );
+    }
+    //#3
+    if(age < 18 || age > 60) {
+        alert( 'Your age is not between 18-60.' );
+    }
+
+    
+
+    //#4
+    if (-1 || 0) alert( 'first' );
+    //run
+    if (-1 && 0) alert( 'second' );
+    //not run
+    if (null || -1 && 0) alert( 'third' );
+    //not run
+
+</script>
+</html>

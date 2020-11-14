@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical</title>
+</head>
+<body>
+    <p>ให้เขียนระบบ login</p>
+    <ul>
+        <li>ให้ใช้ prompt ในการถามใครเป็นคน login</li>
+        <li>ถ้าผู้ใช้กรอกว่า “Admin” ให้ใช้ prompt ถาม password</li>
+        <ul>
+            <li>วิธีเช็ค Password</li>
+            <li>ถ้า string นั้นเป็น “codecamp#5” ให้ alert “ยินดีต้อนรับ”</li>
+            <li>ถ้า string เป็นอย่างอื่นให้ alert เป็น “Wrong password”</li>
+            <li>ถ้าเป็น string ว่าง หรือ กด cancel ให้ alert ว่า “ยกเลิก”</li>
+        </ul>
+        <li>ถ้าผู้ใช้กรอกอย่างอื่นที่ไม่ใช่ “Admin” ให้ alert ว่า “ผมไม่รู้จักคุณ”</li>
+        <li>ถ้าผู้ใช้กรอก input เป็น string ว่าง หรือกด Esc ให้ alert ว่า “ยกเลิก”</li>
+    </ul>
+</body>
+<script>
+    let who = prompt('Who are you?');
+    if (who === 'Admin') {
+        let password = prompt('password');
+        if(password === 'codecamp#5') {
+            alert('ยินดีต้อนรับ');
+        } else if (password === null || password === '') {
+            alert('ยกเลิก');
+        } else {
+            alert('Wrong password');
+        }
+        console.log(typeof password);
+    } else if (who === null || who === '') {
+            alert('ยกเลิก');
+        } else {
+            alert('ผมไม่รู้จักคุณ');
+        }
+</script>
+</html>
