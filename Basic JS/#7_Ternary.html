@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary</title>
+</head>
+<body>
+    <ol>
+        <li>Browser จะโชว์ข้อความ “Hello Codecamp #5” ไหม</li>
+        <li>ใช้ if else ในการเขียนถามชื่อของคุณ
+            ถ้าตอบถูกให้แสดงคำว่า “เก่งมาก”
+            ถ้าตอบผิดให้แสดงคำว่า “คุณไม่รู้จักชื่อฉัน”
+        </li>
+        <li>ใช้ prompt ในการรับคะแนนมาคำนวณเกรด
+            <br>
+            <ul>
+                <li>ถ้าคะแนน มากกว่าเท่ากับ 80	ได้ A</li>
+                <li>ถ้าคะแนน อยู่ระหว่าง 70 - 79 ได้ B</li>
+                <li>ถ้าคะแนน อยู่ระหว่าง 60 - 69 ได้ C</li>
+                <li>ถ้าคะแนน อยู่ระหว่าง 50 - 59 ได้ D</li>
+                <li>ถ้าคะแนน น้อยกว่า 50 ได้ F</li>
+            </ul>
+        </li>
+    </ol>
+</body>
+<script>
+    //#1
+    if ("0") {
+        alert('Hello Codecamp#5');
+    }
+    //answer: โชว์
+
+    //#2 
+    var myName = 'Pookan';
+    if (myName == 'Pookan') {
+        console.log('เก่งมาก');
+    } else {
+        console.log('คุณไม่รู้จักชื่อฉัน');
+    }
+
+    //#3
+    var prompt = 99;
+    if(prompt > 80) {
+        console.log('A');
+    } else if(prompt > 79) {
+        console.log('B');
+    } else if(prompt > 69) {
+        console.log('C');
+    } else if(prompt > 59) {
+        console.log('D');
+    } else {
+        console.log('F');
+    }
+</script>
+</html>

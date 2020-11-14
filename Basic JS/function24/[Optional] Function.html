@@ -1,0 +1,358 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+</body>
+<script>
+    var n;
+    //#1
+    const draw = n => {
+        var printed = '';
+        for(var i = n; i > 0; i--) {
+            printed += '*';
+        }
+        console.log(printed);
+    }
+    
+    //2
+    const draw = n => {
+        var printedRow = '';
+        for(var i = n; i > 0; i--) {
+            printedRow = '';
+            for(var j = n; j > 0; j--) {
+                printedRow += '*';
+            }
+            console.log(printedRow);
+        }
+    }
+
+    //3
+    const draw = n => {
+        var printedRow = '';
+        for(var i = n; i > 0; i--) {
+            printedRow = '';
+            for(var j = 1; j <= n; j++) {
+                printedRow += j.toString();
+            }
+            console.log(printedRow);
+        }
+    }
+
+    //4
+    const draw = n => {
+        var printedRow = '';
+        for(var i = 1; i <= n; i++) {
+            printedRow = '';
+            for(var j = 1; j <= n; j++) {
+                printedRow += i.toString();
+            }
+            console.log(printedRow);
+        }
+    }
+
+    //5
+    const draw = n => {
+        var printedRow = '';
+        for(var i = n; i > 0; i--) {
+            printedRow = '';
+            for(var j = 1; j <= n; j++) {
+                printedRow += i.toString();
+            }
+            console.log(printedRow);
+        }
+    }
+
+    //6
+    const draw = n => {
+        var printedRow = '';
+        var count = 1;
+        for(var i = 1; i <= n; i++) {
+            printedRow = '';
+            for(var j = 1; j <= n; j++) {
+                printedRow += count.toString();
+                count++;
+            }
+            console.log(printedRow);
+        }
+    }
+
+    //7
+    const draw = n => {
+        var printedRow = '';
+        var numMulti = n * n;
+        for(var i = 1; i <= n; i++) {
+            printedRow = '';
+            for(var j = 1; j <= n; j++) {
+                printedRow += numMulti.toString();
+                numMulti--;
+            }
+            console.log(printedRow);
+        }
+    }
+
+    //8
+    const draw = n => {
+        var evenNum = 0;
+        for(var i = n; i > 0; i--) {
+            console.log(evenNum);
+            evenNum += 2;
+        }
+    }
+
+    //9
+    const draw = n => {
+        var evenNum = 2;
+        for(var i = n; i > 0; i--) {
+            console.log(evenNum);
+            evenNum += 2;
+        }
+    }
+
+    //10
+    const draw = n => {
+        var printedRow = '';
+        var count = 1;
+        for(var i = 1; i < n + 1; i++) {
+            printedRow = '';
+            for(var j = 1; j <= n; j++) {
+                count = i * j;
+                printedRow += count.toString();
+            }
+            console.log(printedRow);
+        }
+    }
+
+    //11
+    const draw = n => {
+        var printedRow = '';
+        for(var i = n; i > 0; i--) {
+            printedRow = '';
+            for(var j = n; j > 0; j--) {
+              if(i === j) {
+                printedRow += '-';
+
+              } else {
+                printedRow += '*';
+              }  
+            }
+            console.log(printedRow);
+        }
+    }
+
+    //12
+    const draw = n => {
+        var printedRow = '';
+        for(var i = n; i > 0; i--) {
+            printedRow = '';
+            for(var j = 1; j <= n; j++) {
+              if(i === j) {
+                printedRow += '-';
+
+              } else {
+                printedRow += '*';
+              }  
+            }
+            console.log(printedRow);
+        }
+    }
+
+    //13
+    const draw = n => {
+        var printedRow = '';
+        for(var i = n; i > 0; i--) {
+            printedRow = '';
+            for(var j = n; j > 0; j--) {
+              if(j < i) {
+                printedRow += '-';
+
+              } else {
+                printedRow += '*';
+              }  
+            }
+            console.log(printedRow);
+        }
+    }
+
+    //14
+    const draw = n => {
+        var printedRow = '';
+        for(var i = n; i > 0; i--) {
+            printedRow = '';
+            for(var j = 1; j <= n; j++) {
+              if(j > i) {
+                printedRow += '-';
+
+              } else {
+                printedRow += '*';
+              }  
+            }
+            console.log(printedRow);
+        }
+    }
+
+    //15
+    const draw = n => {
+        var printedRow = '';
+        for(var i = n-1; Math.abs(i) < n; i--) {
+            printedRow = '';
+            for(var j = n; j > 0; j--) {
+              if(j <= Math.abs(i)) {
+                printedRow += '-';
+
+              } else {
+                printedRow += '*';
+              }  
+            }
+            console.log(printedRow);
+        }
+    }
+
+    //16
+    //Question missing
+
+    //17
+    const draw = n => {
+        var printedRow = '';
+        for(var i = n; i > 0; i--) {
+            printedRow = '';
+            for(var j = 1; j <= n; j++) {
+              if(i > j) {
+                printedRow += '-';
+
+              } else {
+                printedRow += '*';
+              }  
+            }
+            console.log(printedRow);
+        }
+    }
+
+    //18
+    const draw = n => {
+        var printedRow = '';
+        for(var i = 1; i <= n; i++) {
+            printedRow = '';
+            for(var j = 1; j <= n; j++) {
+              if(i > j) {
+                printedRow += '-';
+
+              } else {
+                printedRow += '*';
+              }  
+            }
+            console.log(printedRow);
+        }
+    }
+
+    //19
+    const draw = n => {
+        var printedRow = '';
+        for(var i = n-1; Math.abs(i) < n; i--) {
+            printedRow = '';
+            for(var j = 1; j <= n; j++) {
+              if(j <= Math.abs(i)) {
+                printedRow += '-';
+
+              } else {
+                printedRow += '*';
+              }  
+            }
+            console.log(printedRow);
+        }
+    }
+
+    //20
+    const draw = n => {
+        var printedRow = '';
+        var count = 1;
+        for(var i = n-1; Math.abs(i) < n; i--) {
+            printedRow = '';
+            for(var j = 1; j <= n; j++) {
+              if(j <= Math.abs(i)) {
+                printedRow += '_';
+
+              } else {
+                printedRow += count;
+                count++
+              }  
+            }
+            console.log(printedRow);
+        }
+    }
+
+    //21
+    const draw = n => {
+        var printedRow = '';
+        for(var i = 1; i <= n; i++) {
+            printedRow = '';
+            for(var j = n - 1; Math.abs(j) < n; j--) {
+              if(i <= Math.abs(j)) {
+                printedRow += '_';
+
+              } else {
+                printedRow += '*';
+              }  
+            }
+            console.log(printedRow);
+        }
+    }
+
+    //22
+    const draw = n => {
+        var printedRow = '';
+        for(var i = n; i > 0; i--) {
+            printedRow = '';
+            for(var j = n - 1; Math.abs(j) < n; j--) {
+              if(i <= Math.abs(j)) {
+                printedRow += '_';
+
+              } else {
+                printedRow += '*';
+              }  
+            }
+            console.log(printedRow);
+        }
+    }
+
+    //23
+    const draw = n => {
+        var printedRow = '';
+        var range = 0;
+        for(var i = n - 1; Math.abs(i) < n; i--) {
+            printedRow = '';
+             range = (n - 1) - Math.abs(i);
+            for(var j = n - 1; Math.abs(j) < n; j--) {
+              if(Math.abs(j) <= range) {
+                printedRow += '*';
+              } else {
+                printedRow += '_';
+              }
+            }
+            console.log(printedRow);
+        }
+    }
+
+    //24
+    const draw = n => {
+        var printedRow = '';
+        var range = 0;
+        var count = 1;
+        for(var i = n - 1; Math.abs(i) < n; i--) {
+            printedRow = '';
+             range = (n - 1) - Math.abs(i);
+            for(var j = n - 1; Math.abs(j) < n; j--) {
+              if(Math.abs(j) <= range) {
+                printedRow += count;
+                count++;
+              } else {
+                printedRow += '_';
+              }
+            }
+            console.log(printedRow);
+        }
+    }
+</script>
+</html>
