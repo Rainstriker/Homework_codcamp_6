@@ -1,6 +1,9 @@
 const animalsRouter = require('express').Router();
 
-module.exports = animalsRouter;
+const animals = {
+  dog: ['walk', 'play'], 
+  cat: ['eat', 'sleep']
+};
 
 animalsRouter.use('/', animalsRouter);
 
@@ -36,3 +39,6 @@ animalsRouter.get('/animals/:animal/sleep', (req, res, next) => {
   const animal = 'dog';
   res.send(`${req.animal} sleep`);
 })
+
+
+module.exports = animalsRouter;
