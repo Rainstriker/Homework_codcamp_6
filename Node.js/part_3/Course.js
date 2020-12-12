@@ -52,15 +52,27 @@ const addToDataBase = instance => {
   }
 }
 
-const findCourseIndex = (course, elementList) => {
+const findCourseIndex = (id, elementList) => {
   return elementList.findIndex(element => {
-    return element.course === course;
+    return element.id === id;
   });
 }
 
 const deleteFromDataBaseById = (id, elementList) => {
-  const idx = getCourseById(id, elementList);
-  return elementList.splice(idx, 1);
+  const idx = findCourseIndex(id, elementList);
+  console.log(idx)
+  if(idx !== -1) {
+    elementList.splice(idx, 1);
+    updateDataId(Course); 
+  } else {
+    console.log('id not found')
+  }
+}
+
+const updateCurrentData = (id, instance) => {
+  const idx = findCourseIndex(id, Course);
+  Object.assign(Course[idx], instance);
+  updateDataId(Course);
 }
 
 const updateDataId = elementList => {
@@ -76,5 +88,6 @@ module.exports = {
   addToDataBase,
   findCourseIndex,
   deleteFromDataBaseById,
+  updateCurrentData,
   updateDataId
 }
