@@ -1,4 +1,4 @@
-วิเคราะห์ UX / UI ของ http://lazada.co.th/
+# วิเคราะห์ UX / UI ของ http://lazada.co.th/
 a. UX
     i. Interaction Design - มี Message chat แบบfixed position ที่มุมขวาล่าง ที่จะpop-up ขึ้นมาเมื่อคลิก เพื่อให้ผู้ใช้สะดวกถามได้ทันที
                             มีหมวดหมู่สินค้าหลักที่จะโชว์ หมวดหมู่ย่อยเมื่อเอาเมาส์ไป Hover
