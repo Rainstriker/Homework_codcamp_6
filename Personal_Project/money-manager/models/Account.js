@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = models => {
     model.belongsTo(models.User, { foreignKey: 'user_id'});
-    model.belongsToMany(models.Category, { through: 'account_category', foreignKey: 'account_id'});
+    model.hasMany(models.Transaction, { foreignKey: 'account_id'});
   }
 
   return model
