@@ -6,13 +6,17 @@ module.exports = (sequelize, DataTypes) => {
     },
     amount: {
       type: DataTypes.FLOAT
+    },
+    date: {
+      type: DataTypes.DATE
     } 
   }, {
-    tableName: 'transactions'
+    tableName: 'transactions',
+    timestamps: false
   });
 
   model.associate = models => {
-    model.belongsToMany(models.Category, { through: models.Owns});
+    model.belongsToMany(models.Category, { through: models.Owns, foreignKey: 'transaction_id'});
   }
 
   return model
