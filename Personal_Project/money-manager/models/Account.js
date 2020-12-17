@@ -2,7 +2,6 @@ module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define('Account', {
     name: {
       type: DataTypes.STRING(255),
-      unique: true
     },
     amount: {
       type: DataTypes.FLOAT

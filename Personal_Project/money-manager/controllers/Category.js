@@ -1,47 +1,47 @@
-const db = require('../models')
+const db = require('../models');
 
 const getAllCategory = async (req, res) => {
-  const allUsers = await db.User.findAll();
-  res.status(200).send(allUsers);
+  const allCategory = await db.Category.findAll({where: { user_id: req.user.id } });
+  res.status(200).send(allCategory);
 }
 
-const getUserById = async (req, res) => {
-  const targetId = req.params.id;
-  const targetUser = await db.User.findOne({ where: { id: targetId} });
-  res.status(200).send(targetUser);
-}
-
-const createUser = async (req, res) => {
+const addCategory = async (req, res) => {
   const { name } = req.body;
-  const newUser = await db.User.create({
-    name: name
+  const newCategory = await db.Category.create({
+    name: req.body.name,
+    user_id: req.user.id
   });
-  res.status(201).send(newUser);
+  res.status(201).send(newCategory);
 }
 
-const updateUser = async (req, res) => {
-  const targetId = req.params.id;
+const updateCategory = async (req, res) => {
+  const targetId =  Number(req.params.id);
   const { name } = req.body;
-  await db.User.update({
-    name: name
-  }, {
-    where: { id: targetId }
-  });
-  res.status(200).send({message: `User ID: ${targetId} has been updated.`})
+  const targetCategory = await db.Category.findOne({ where: { id: targetId, user_id: req.user.id }});
+  if (targetCategory) {
+    await targetCategory.update({
+      name: name,
+    });
+    res.status(200).send({message: 'Updating is success.'});
+  } else {
+    res.status(404).send({message: 'Category not found.'})
+  }
 }
 
-const deleteUser = async (req, res) => {
-  const targetId = req.params.id;
-  await db.User.destroy({
-    where: { id: targetId }
-  });
-  res.status(204).send();
+const removeCategory = async (req, res) => {
+  const targetId =  Number(req.params.id);
+  const targetCategory = await db.Category.findOne({ where: { id: targetId, user_id: req.user.id }});
+  if (targetCategory) {
+    await targetCategory.destroy();
+    res.status(204).send({message: 'Category deleted.'});
+  } else {
+    res.status(404).send({message: 'Category not found.'})
+  }
 }
 
 module.exports = {
-  getAllUsers,
-  getUserById,
-  createUser,
-  updateUser,
-  deleteUser
+  getAllCategory,
+  addCategory,
+  updateCategory,
+  removeCategory
 }

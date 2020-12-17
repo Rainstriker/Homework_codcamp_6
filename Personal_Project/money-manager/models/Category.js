@@ -2,11 +2,7 @@ module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define('Category', {
     name: {
       type: DataTypes.STRING(255),
-      unique: true
-    },
-    amount: {
-      type: DataTypes.FLOAT
-    } 
+    }
   }, {
     tableName: 'categories',
     timestamps: false

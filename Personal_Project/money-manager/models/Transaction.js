@@ -2,9 +2,8 @@ module.exports = (sequelize, DataTypes) => {
   const model = sequelize.define('Transaction', {
     name: {
       type: DataTypes.STRING(255),
-      unique: true
     },
-    amount: {
+    cost: {
       type: DataTypes.FLOAT
     },
     date: {
@@ -18,6 +17,7 @@ module.exports = (sequelize, DataTypes) => {
   model.associate = models => {
     model.belongsTo(models.Account,  { foreignKey: 'account_id'});
     model.belongsTo(models.Category, { foreignKey: 'category_id'});
+    model.belongsTo(models.User, { foreignKey: 'user_id'});
   }
 
   return model
