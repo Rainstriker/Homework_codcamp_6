@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './componnents/App';
-import reportWebVitals from './reportWebVitals';
+import App from './components/App/App.js';
 import 'antd/dist/antd.css';
+import Index from './pages/Index.js';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Index />
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-reportWebVitals();
