@@ -7,12 +7,9 @@ module.exports = (sequelize, DataTypes) => {
     password: {
       type: DataTypes.STRING(255)
     },
-    firstName: {
+    name: {
       type: DataTypes.STRING(255)
     },
-    lastName: {
-      type: DataTypes.STRING(255)
-    }
   }, {
     tableName: 'users',
     timestamps: true

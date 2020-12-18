@@ -34,6 +34,11 @@ class ModalForm extends React.Component {
     const { visible, loading } = this.state;
     return (
       <>
+        { this.props.button &&
+          <Button type="primary" onClick={this.showModal}>
+            {this.props.des}
+          </Button>
+        }
         <Modal
           visible={visible}
           title={this.props.title}

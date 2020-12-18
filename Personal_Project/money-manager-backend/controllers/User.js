@@ -15,7 +15,7 @@ const getUserById = async (req, res) => {
 }
 
 const registerUser = async (req, res) => {
-  const { username, password, firstName, lastName } = req.body;
+  const { username, password, name } = req.body;
   const targetUser = await db.User.findOne({ where: { username: username }});
   if (targetUser) {
     res.status(400).send({ message: 'Username already taken.'})
@@ -25,8 +25,7 @@ const registerUser = async (req, res) => {
     await db.User.create({
       username: username,
       password: hashedPassword,
-      firstName: firstName,
-      lastName: lastName
+      name: name
     });
     res.status(201).send({ message: 'User created' });
   }  
@@ -41,8 +40,7 @@ const loginUser = async (req, res) => {
     const isCorrectPassword = bcryptjs.compareSync(password, targetUser.password);
     if (isCorrectPassword) {
       const payload = {
-        firstName: targetUser.firstName,
-        lastName: targetUser.lastName,
+        name: targetUser.name,
         id: targetUser.id
       }
       const token = jwt.sign(payload, process.env.SECRET_OR_KEY, { expiresIn: 3600});
@@ -58,12 +56,11 @@ const loginUser = async (req, res) => {
 
 const updateUser = async (req, res) => {
   const targetId = req.params.id;
-  const { username, password, firstName, lastName } = req.body;
+  const { username, password, name } = req.body;
   await db.User.update({
     username: username,
     password: password,
-    firstName: firstName,
-    lastName: lastName
+    name: name
   }, {
     where: { id: targetId }
   });

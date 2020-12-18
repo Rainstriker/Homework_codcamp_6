@@ -1,6 +1,9 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button, Checkbox, notification } from 'antd';
+
+import Backend from '../../util/Backend';
+import LocalStorageService from '../../services/localStorageService';
 
 const layout = {
   labelCol: {
@@ -17,9 +20,29 @@ const tailLayout = {
   },
 };
 
-const Login = () => {
-  const onFinish = (values) => {
-    console.log('Success:', values);
+const Login = props => {
+  
+  const onFinish = values => {
+    const body = {
+      username: values.username,
+      password: values.password,
+    };
+    Backend.login(body
+      ).then( result => {
+        console.log(result)
+        LocalStorageService.setToken(result.data.token);
+        props.setRole('user');
+        notification.success({
+          message: `Good to see you!`,
+          placement: 'bottomRight'
+        });
+      }).catch( err => {
+        notification.error({
+          message: `Login failed.`,
+          placement: 'bottomRight'
+        });
+        console.log(err);
+      });
   };
 
   const onFinishFailed = (errorInfo) => {

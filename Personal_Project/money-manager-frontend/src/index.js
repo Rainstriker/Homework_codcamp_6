@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App/App.js';
 import 'antd/dist/antd.css';
-import Index from './pages/Index.js';
+import { Router } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Index />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

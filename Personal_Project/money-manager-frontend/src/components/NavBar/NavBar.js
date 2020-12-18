@@ -1,6 +1,24 @@
 import React from 'react';
+import Setting from '../Setting/Setting';
 
 const NavBar = props => {
+  const changeTool = () => {
+    if (window.location.pathname === '/manage') {
+      return (
+        <Setting setRole={props.setRole}/>
+      );
+    } else {
+      return (
+        <p>
+            <a style={{ color: 'black', fontSize: 14, fontFamily: 'Roboto', margin: 'auto' }}
+              onClick={props.onClick}>
+              Login
+          </a>
+        </p>
+      );
+    }
+  }
+
   return (
     <>
       <nav style={{
@@ -9,7 +27,7 @@ const NavBar = props => {
         borderBottom: '1px solid #D2D2D2',
       }}>
         <div style={{
-          padding: '10px 20px 0px 20px',
+          padding: '15px 20px 0px 20px',
           margin: 'auto',
           display: 'flex',
           flexDirection: 'row',
@@ -21,12 +39,7 @@ const NavBar = props => {
           maxWidth: 975
         }}>
           <h1 style={{ fontSize: 24, fontFamily: 'Rozha One, serif' }}>Money Manager</h1>
-          <p>
-            <a style={{ color: 'black', fontSize: 14, fontFamily: 'Roboto', margin: 'auto' }}
-              onClick={props.onClick}>
-              Login
-          </a>
-          </p>
+          {changeTool()}
         </div>
       </nav>
     </>
