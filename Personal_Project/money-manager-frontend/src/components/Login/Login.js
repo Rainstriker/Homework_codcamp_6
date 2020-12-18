@@ -29,7 +29,6 @@ const Login = props => {
     };
     Backend.login(body
       ).then( result => {
-        console.log(result)
         LocalStorageService.setToken(result.data.token);
         props.setRole('user');
         notification.success({

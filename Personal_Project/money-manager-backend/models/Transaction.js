@@ -3,20 +3,15 @@ module.exports = (sequelize, DataTypes) => {
     name: {
       type: DataTypes.STRING(255),
     },
-    cost: {
-      type: DataTypes.FLOAT
-    },
-    date: {
-      type: DataTypes.DATE
-    } 
+    amount: {
+      type: DataTypes.INTEGER
+    }
   }, {
     tableName: 'transactions',
     timestamps: false
   });
 
   model.associate = models => {
-    model.belongsTo(models.Account,  { foreignKey: 'account_id'});
-    model.belongsTo(models.Category, { foreignKey: 'category_id'});
     model.belongsTo(models.User, { foreignKey: 'user_id'});
   }
 

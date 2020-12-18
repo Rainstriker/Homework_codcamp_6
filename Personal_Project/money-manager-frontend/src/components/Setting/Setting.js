@@ -1,4 +1,6 @@
 import React from 'react';
+import ModalForm from '../ModalForm/ModalForm';
+import UpdateUser from '../UpdateUser/UpdateUser';
 import LocalStorageService from '../../services/localStorageService';
 
 import { Menu, Dropdown, notification } from 'antd';
@@ -17,9 +19,7 @@ const Setting = props => {
   const menu = (
     <Menu>
       <Menu.Item>
-        <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">
-          Update profile
-      </a>
+        <ModalForm form={<UpdateUser />} button={true} style2={true} title='Your Profile' des='Update profile'/>
       </Menu.Item>
       <Menu.Item onClick={logout} danger>Logout</Menu.Item>
     </Menu>

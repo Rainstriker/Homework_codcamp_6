@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Setting from '../Setting/Setting';
 
 const NavBar = props => {
   const changeTool = () => {
     if (window.location.pathname === '/manage') {
       return (
-        <Setting setRole={props.setRole}/>
+        <div style={{width: '30vh', display: 'flex', justifyContent: 'flex-end'}}>
+          <p style={{fontSize: 14, fontFamily: 'Roboto', paddingRight: 15 }}>{props.name}</p>
+          <Setting setRole={props.setRole}/>
+        </div>
       );
     } else {
       return (

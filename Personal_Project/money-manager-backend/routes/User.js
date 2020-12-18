@@ -5,13 +5,14 @@ const passport = require('passport');
 
 const authentication = passport.authenticate('jwt', { session: false });
 
-router.get('/', authentication, userControllers.getAllUsers);
-router.get('/:id', authentication, userControllers.getUserById);
+router.get('/info', authentication, userControllers.getUserById);
 
 router.post('/register', userControllers.registerUser);
 router.post('/login', userControllers.loginUser);
 
-router.put('/:id', authentication, userControllers.updateUser);
-router.delete('/:id', authentication, userControllers.deleteUser);
+router.put('/update/info', authentication, userControllers.updateUserInfo);
+router.put('/update/password', authentication, userControllers.updateUserPassword);
+
+router.delete('/delete', authentication, userControllers.deleteUser);
 
 module.exports = router;

@@ -30,15 +30,29 @@ class ModalForm extends React.Component {
     this.setState({ visible: false });
   };
 
+  styleChange = () => {
+    if (this.props.button) {
+      if (this.props.style1) {
+        return (
+          <Button type="primary" onClick={this.showModal}>
+            {this.props.des}
+          </Button>
+        );
+      } else if (this.props.style2) {
+        return (
+          <a onClick={this.showModal}>
+            {this.props.des}
+        </a>
+        );
+      }
+    }
+  }
+
   render() {
     const { visible, loading } = this.state;
     return (
       <>
-        { this.props.button &&
-          <Button type="primary" onClick={this.showModal}>
-            {this.props.des}
-          </Button>
-        }
+        {this.styleChange()}
         <Modal
           visible={visible}
           title={this.props.title}

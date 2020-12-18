@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 
 import Backend from '../../util/Backend';
 
-import { withRouter } from 'react-router-dom';
-
 import 'antd/dist/antd.css';
 import {
   Form,
@@ -45,7 +43,7 @@ const tailFormItemLayout = {
   },
 };
 
-const RegistrationForm = props => {
+const UpdateUser = props => {
   const [form] = Form.useForm();
 
   const onFinish = values => {
@@ -55,16 +53,17 @@ const RegistrationForm = props => {
       password: values.password,
       name: values.name
     };
-    Backend.register(body
+    Backend.update(body
       ).then( res => {
+        console.log(res)
         notification.success({
-          message: `Greeting ${values.name}!`,
+          message: `Update ${values.name} info success!`,
           placement: 'bottomRight'
         });
-        props.history.push('/login');
+        // props.history.push('/login');
       }).catch( err => {
         notification.error({
-          message: `Register failed.`,
+          message: `Update failed, please try again.`,
           placement: 'bottomRight'
         });
         console.log(err);
@@ -98,45 +97,7 @@ const RegistrationForm = props => {
           },
         ]}
       >
-        <Input />
-      </Form.Item>
-
-      <Form.Item
-        name="password"
-        label="Password"
-        rules={[
-          {
-            required: true,
-            message: 'Please input your password!',
-          },
-        ]}
-        hasFeedback
-      >
-        <Input.Password />
-      </Form.Item>
-
-      <Form.Item
-        name="confirm"
-        label="Confirm Password"
-        dependencies={['password']}
-        hasFeedback
-        rules={[
-          {
-            required: true,
-            message: 'Please confirm your password!',
-          },
-          ({ getFieldValue }) => ({
-            validator(rule, value) {
-              if (!value || getFieldValue('password') === value) {
-                return Promise.resolve();
-              }
-
-              return Promise.reject('The two passwords that you entered do not match!');
-            },
-          }),
-        ]}
-      >
-        <Input.Password />
+        <Input placeholder='name'/>
       </Form.Item>
       <Form.Item
         name="name"
@@ -167,4 +128,4 @@ const RegistrationForm = props => {
   );
 };
 
-export default withRouter(RegistrationForm);
+export default UpdateUser;
