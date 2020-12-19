@@ -1,13 +1,13 @@
-# Precamp Project
+### Precamp Project
   Simple Timer 
   https://scratch.mit.edu/projects/403086382/
 
-# Oak Code Kata Project and Homework repo
+### Oak Code Kata Project and Homework repo
 
   Project Repo
   https://github.com/Rainstriker/OakCodeKata_codecamp_-6
 
-### Personal Project
+# Personal Project
 
   Money Manager
   https://github.com/Rainstriker/Homework_codcamp_6/tree/master/Personal_Project
