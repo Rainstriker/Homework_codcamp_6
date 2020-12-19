@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 
 import Backend from '../../util/Backend';
+import LocalStorageService from '../../services/localStorageService';
+import { withRouter } from 'react-router-dom';
 
 import 'antd/dist/antd.css';
 import {
   Form,
   Input,
-  Tooltip,
   Button,
   notification
 } from 'antd';
-import { QuestionCircleOutlined } from '@ant-design/icons';
 
 const formItemLayout = {
   labelCol: {
@@ -43,25 +43,25 @@ const tailFormItemLayout = {
   },
 };
 
-const UpdateUser = props => {
+const UpdatePassword = props => {
   const [form] = Form.useForm();
 
   const onFinish = values => {
     console.log('Received values of form: ', values);
     const body = {
-      username: values.email,
-      name: values.name
+      password: values.password,
     };
-    Backend.updateUserInfo(body
+    Backend.updateUserPassword(body
       ).then( res => {
-        console.log(res)
         notification.success({
-          message: `Update ${values.name} info success!`,
+          message: `Update password success.${values.name}!`,
           placement: 'bottomRight'
         });
+        LocalStorageService.removeToken();
+        props.history.push('/login');
       }).catch( err => {
         notification.error({
-          message: `Update failed, please try again.`,
+          message: `Update password failed.`,
           placement: 'bottomRight'
         });
         console.log(err);
@@ -81,41 +81,44 @@ const UpdateUser = props => {
       scrollToFirstError
       style={{paddingRight: 40, margin: 'auto'}}
     >
+    
+
       <Form.Item
-        name="email"
-        label="E-mail"
+        name="password"
+        label="Password"
         rules={[
           {
-            type: 'email',
-            message: 'The input is not valid E-mail!',
-          },
-          {
-            required: false,
-            message: 'Please input your E-mail!',
+            required: true,
+            message: 'Please input your password!',
           },
         ]}
+        hasFeedback
       >
-        <Input />
+        <Input.Password />
       </Form.Item>
+
       <Form.Item
-        name="name"
-        label={
-          <span>
-            name&nbsp;
-            <Tooltip title="What do you want others to call you?">
-              <QuestionCircleOutlined />
-            </Tooltip>
-          </span>
-        }
+        name="confirm"
+        label="Confirm Password"
+        dependencies={['password']}
+        hasFeedback
         rules={[
           {
-            required: false,
-            message: 'Please input your name!',
-            whitespace: true,
+            required: true,
+            message: 'Please confirm your password!',
           },
+          ({ getFieldValue }) => ({
+            validator(rule, value) {
+              if (!value || getFieldValue('password') === value) {
+                return Promise.resolve();
+              }
+
+              return Promise.reject('The two passwords that you entered do not match!');
+            },
+          }),
         ]}
       >
-        <Input />
+        <Input.Password />
       </Form.Item>
       <Form.Item {...tailFormItemLayout}>
         <Button type="primary" htmlType="submit">
@@ -126,4 +129,4 @@ const UpdateUser = props => {
   );
 };
 
-export default UpdateUser;
+export default withRouter(UpdatePassword);

@@ -44,20 +44,20 @@ const Backend = {
     return await axios.put('users/update/password', qs.stringify(requestBody));
   },
 
-  // Account GET method
-  async getAccounts() {
-    return await axios.get('accounts/');
-  },
-
-  // Category GET method
-  async getCategories() {
-    return await axios.get('categories/');
-  },
-
   // Transaction GET method  
   async getTansactions() {
     return await axios.get('transactions/');
-  }
+  },
+
+  // Transaction POST method  
+  async addTransaction(requestBody) {
+    return await axios.post('transactions/add', qs.stringify(requestBody));
+  },
+
+  // Transaction DELETE method 
+  async removeTransaction(id) {
+    return await axios.delete(`transactions/remove/${id}`);
+  },
 }
 
 export default Backend;

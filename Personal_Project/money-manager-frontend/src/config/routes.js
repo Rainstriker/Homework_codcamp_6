@@ -22,6 +22,6 @@ export default {
     allowedRoutes: [components.welcome, components.LoginPage], redirectRoutes: '/welcome' 
   },
   user: {
-    allowedRoutes: [components.manage], redirectRoutes: '/manage' 
+    allowedRoutes: [components.manage, components.LoginPage], redirectRoutes: '/manage' 
   }
 };

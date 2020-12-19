@@ -4,6 +4,7 @@ import { Form, Input, Button, Checkbox, notification } from 'antd';
 
 import Backend from '../../util/Backend';
 import LocalStorageService from '../../services/localStorageService';
+import { withRouter } from 'react-router-dom';
 
 const layout = {
   labelCol: {
@@ -35,6 +36,7 @@ const Login = props => {
           message: `Good to see you!`,
           placement: 'bottomRight'
         });
+        props.history.push('/manage');
       }).catch( err => {
         notification.error({
           message: `Login failed.`,
@@ -97,4 +99,4 @@ const Login = props => {
   );
 }
 
-export default Login;
+export default withRouter(Login);

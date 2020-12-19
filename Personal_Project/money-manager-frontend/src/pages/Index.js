@@ -11,19 +11,22 @@ const Index = props => {
   return (
     <>
       <NavBar onClick={() => { childRef.current.showModal() }}/>
+      <div id='welcome-container'>
+        <h1 id='welcome-text'>Money Manager</h1>
+        <ModalForm 
+        title={'Sign Up'} 
+        form={<RegistrationForm />} 
+        button={true}
+        style1={true}
+        des='Sign Up'
+        />
+      </div>
       <ModalForm 
         ref={childRef} 
         title={'Login'} 
         form={<Login 
         setRole={props.setRole}/>} 
         button={false}
-      />
-      <ModalForm 
-        title={'Sign Up'} 
-        form={<RegistrationForm />} 
-        button={true}
-        style1={true}
-        des='Sign Up'
       />
     </>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import ModalForm from '../ModalForm/ModalForm';
 import UpdateUser from '../UpdateUser/UpdateUser';
+import UpdatePassword from '../UpdateUser/UpdatePassword';
 import LocalStorageService from '../../services/localStorageService';
 
 import { Menu, Dropdown, notification } from 'antd';
@@ -19,7 +20,10 @@ const Setting = props => {
   const menu = (
     <Menu>
       <Menu.Item>
-        <ModalForm form={<UpdateUser />} button={true} style2={true} title='Your Profile' des='Update profile'/>
+        <ModalForm form={<UpdateUser />} button={true} style2={true} title='Update profile' des='Update profile'/>
+      </Menu.Item>
+      <Menu.Item>
+        <ModalForm form={<UpdatePassword />} button={true} style2={true} title='Update password' des='Update password'/>
       </Menu.Item>
       <Menu.Item onClick={logout} danger>Logout</Menu.Item>
     </Menu>

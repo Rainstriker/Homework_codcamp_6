@@ -55,8 +55,12 @@ const updateUserInfo = async (req, res) => {
   const { username, name } = req.body;
   const targetUser = await db.User.findOne({ where: { id: req.user.id } });
   if (targetUser) {
-    targetUser.username = username;
-    targetUser.name = name;
+    if (username) {
+      targetUser.username = username;
+    }
+    if (name) {
+      targetUser.name = name;
+    }
     await targetUser.save({ fields: ['username', 'name'] });
     res.status(200).send({message: `Your profile has been updated.`});
   } else {
