@@ -1,8 +1,8 @@
 ### Precamp Project
-  Simple Timer 
-  https://scratch.mit.edu/projects/403086382/
+  [Simple Timer](https://scratch.mit.edu/projects/403086382/)
+  
 
-### Oak Code Kata Project and Homework repo
+### Oak Code Kata Project Project
 
   Project Repo
   https://github.com/Rainstriker/OakCodeKata_codecamp_-6
