@@ -10,7 +10,7 @@
 # Personal Project
 
   Money Manager
-  https://github.com/Rainstriker/Homework_codcamp_6/tree/master/Personal_Project
+  https://github.com/Rainstriker/money-manager
 
   ## To Start
   1. cd money-manager-backend
