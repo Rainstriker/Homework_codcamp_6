@@ -19,7 +19,7 @@
   13. [สร้างเว็บข่าว ด้วย Database และ EJS](https://github.com/Rainstriker/OakCodeKata_codecamp_-6/tree/master/ExpressJS%20%2B%20Database%20%2B%20EJS/EJS)
   14. [ออกแบบ Database Web ข่าว](https://github.com/Rainstriker/OakCodeKata_codecamp_-6/tree/master/Database/Database%20Web)
 
-  <span style="color:red">**To navigate file, go to oak_code_kata dir. Open terminal and type npm start.</span>
+  <span style="color:red">** **To navigate file, go to oak_code_kata dir. Open terminal and type npm start.**</span>
   
 # Personal Project
 
