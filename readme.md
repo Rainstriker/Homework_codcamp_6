@@ -9,17 +9,17 @@
   3. [Personal Portfolio Website](https://github.com/Rainstriker/OakCodeKata_codecamp_-6/tree/master/HTML%20Project/Project%203%20-%20Personal%20Portfolio%20Website)
   4. [My Website](https://github.com/Rainstriker/OakCodeKata_codecamp_-6/tree/master/HTML%20Responsive%20with%20Bootstrap/Project%201%20-%20My%20Website)
   5. [Project 2 - Web ข่าว](https://github.com/Rainstriker/OakCodeKata_codecamp_-6/tree/master/HTML%20Responsive%20with%20Bootstrap/Project%202%20-%20%20Web%20%E0%B8%82%E0%B9%88%E0%B8%B2%E0%B8%A7)
-  6. [Front-end fun with list of cards](https://github.com/Rainstriker/OakCodeKata_codecamp_-6/tree/master/React%20Project/oak_code_kata/src/components/CardList) <span style="color:red">**</span>
+  6. [Front-end fun with list of cards](https://github.com/Rainstriker/OakCodeKata_codecamp_-6/tree/master/React%20Project/oak_code_kata/src/components/CardList) **
   7. [Getting Complex With Wizard Form](https://github.com/Rainstriker/OakCodeKata_codecamp_-6/tree/master/React%20Project/oak_code_kata/src/components/WizardForm) 
-  8. [Search auto complete](https://github.com/Rainstriker/OakCodeKata_codecamp_-6/tree/master/React%20Project/oak_code_kata/src/components/AutoComplete) <span style="color:red">**</span>
-  9. [GitHub Search App](https://github.com/Rainstriker/OakCodeKata_codecamp_-6/tree/master/React%20Project/oak_code_kata/src/components/GitHubSearch) <span style="color:red">**</span>
-  10. [Search and Filter List Records](https://github.com/Rainstriker/OakCodeKata_codecamp_-6/tree/master/React%20Project/oak_code_kata/src/components/SearchFilter) <span style="color:red">**</span>
-  11. [form container](https://github.com/Rainstriker/OakCodeKata_codecamp_-6/tree/master/React%20Project/oak_code_kata/src/components/SampleForm) <span style="color:red">**</span>
-  12. [form validation](https://github.com/Rainstriker/OakCodeKata_codecamp_-6/tree/master/React%20Project/oak_code_kata/src/components/ValidatedForm) <span style="color:red">**</span>
+  8. [Search auto complete](https://github.com/Rainstriker/OakCodeKata_codecamp_-6/tree/master/React%20Project/oak_code_kata/src/components/AutoComplete) **
+  9. [GitHub Search App](https://github.com/Rainstriker/OakCodeKata_codecamp_-6/tree/master/React%20Project/oak_code_kata/src/components/GitHubSearch) **
+  10. [Search and Filter List Records](https://github.com/Rainstriker/OakCodeKata_codecamp_-6/tree/master/React%20Project/oak_code_kata/src/components/SearchFilter) **
+  11. [form container](https://github.com/Rainstriker/OakCodeKata_codecamp_-6/tree/master/React%20Project/oak_code_kata/src/components/SampleForm) **
+  12. [form validation](https://github.com/Rainstriker/OakCodeKata_codecamp_-6/tree/master/React%20Project/oak_code_kata/src/components/ValidatedForm) **
   13. [สร้างเว็บข่าว ด้วย Database และ EJS](https://github.com/Rainstriker/OakCodeKata_codecamp_-6/tree/master/ExpressJS%20%2B%20Database%20%2B%20EJS/EJS)
   14. [ออกแบบ Database Web ข่าว](https://github.com/Rainstriker/OakCodeKata_codecamp_-6/tree/master/Database/Database%20Web)
 
-  <span style="color:red">** **To navigate file, go to oak_code_kata dir. Open terminal and type npm start.**</span>
+  ****To navigate file, go to oak_code_kata dir. Open terminal and type npm start.**
   
 # Personal Project
 
